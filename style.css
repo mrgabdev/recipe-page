@@ -1,0 +1,152 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  background-color: var(--eggshell);
+  font-family: 'outfit', sans;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  font-family: 'young serif', serif;
+  margin: 0;
+}
+
+h1 {
+  color: var(--dark-charcoal);
+}
+
+h2 {
+  color: var(--nutmeg);
+}
+
+li {
+  padding-left: 15px;
+}
+
+p,
+li,
+td {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--wenge-brown);
+}
+
+ol li::marker {
+  color: var(--nutmeg);
+  font-weight: bold;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 1.5em;
+  padding: 40px;
+  max-width: 700px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.hero--mobile {
+  display: none;
+}
+
+.divider {
+  width: 100%;
+  border: 1px var(--light-grey) solid;
+}
+
+.preparation {
+  background-color: var(--rose-white);
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0px 2px 4px rgba(68, 51, 69, 0.5); */
+}
+
+.preparation__title {
+  font-family: 'outfit', sans;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--dark-raspberry);
+}
+
+.preparation__list li::marker {
+  color: var(--dark-raspberry);
+  font-size: 12px;
+}
+
+.ingredients__list li::marker {
+  color: var(--nutmeg);
+  font-size: 12px;
+}
+
+.instructions__list > li {
+  margin-bottom: 10px;
+}
+
+.nutrition-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+}
+
+tr td {
+  border-bottom: 1px solid var(--light-grey);
+  padding-left: 5%;
+  padding-bottom: 10px;
+}
+
+tr td:nth-of-type(2) {
+  color: var(--nutmeg);
+  font-weight: bold;
+}
+@media screen and (width <= 500px) {
+  .card {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .hero--mobile {
+    display: block;
+  }
+  .hero--desktop {
+    display: none;
+  }
+}
